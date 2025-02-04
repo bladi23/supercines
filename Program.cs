@@ -1,4 +1,9 @@
+using supercines.Config;
+using Microsoft.EntityFrameworkCore;
+
 var builder = WebApplication.CreateBuilder(args);
+var connectionString = builder.Configuration.GetConnectionString("cn");
+builder.Services.AddDbContext<SupercinesAppContext>(options => options.UseSqlServer(connectionString));
 
 // Add services to the container.
 builder.Services.AddControllersWithViews();
