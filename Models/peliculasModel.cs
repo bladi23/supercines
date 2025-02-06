@@ -1,4 +1,4 @@
-﻿using Microsoft.CodeAnalysis.Options;
+﻿
 using System.ComponentModel.DataAnnotations;
 
 namespace supercines.Models
@@ -48,5 +48,6 @@ namespace supercines.Models
 
         public List<repartosModel> Reparto { get; set; } = new List<repartosModel>();
         public List<opinionesModel> Opiniones { get; set; } = new List<opinionesModel>();
+        public List<funcionesModel> Funciones { get; set; } = new List<funcionesModel>();
     }
 }

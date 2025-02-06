@@ -1,0 +1,89 @@
+﻿@model supercines.Models.peliculasModel
+
+@{
+    ViewData["Title"] = "Create";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h1>Create</h1>
+
+<h4>peliculasModel</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Create">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="TituloDistribucion" class="control-label"></label>
+                <input asp-for="TituloDistribucion" class="form-control" />
+                <span asp-validation-for="TituloDistribucion" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="TituloOriginal" class="control-label"></label>
+                <input asp-for="TituloOriginal" class="form-control" />
+                <span asp-validation-for="TituloOriginal" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Genero" class="control-label"></label>
+                <input asp-for="Genero" class="form-control" />
+                <span asp-validation-for="Genero" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="IdiomaOriginal" class="control-label"></label>
+                <input asp-for="IdiomaOriginal" class="form-control" />
+                <span asp-validation-for="IdiomaOriginal" class="text-danger"></span>
+            </div>
+            <div class="form-group form-check">
+                <label class="form-check-label">
+                    <input class="form-check-input" asp-for="Subtitulada" /> @Html.DisplayNameFor(model => model.Subtitulada)
+                </label>
+            </div>
+            <div class="form-group">
+                <label asp-for="PaisOrigen" class="control-label"></label>
+                <input asp-for="PaisOrigen" class="form-control" />
+                <span asp-validation-for="PaisOrigen" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="AñoProduccion" class="control-label"></label>
+                <input asp-for="AñoProduccion" class="form-control" />
+                <span asp-validation-for="AñoProduccion" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="UrlSitioWeb" class="control-label"></label>
+                <input asp-for="UrlSitioWeb" class="form-control" />
+                <span asp-validation-for="UrlSitioWeb" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Duracion" class="control-label"></label>
+                <input asp-for="Duracion" class="form-control" />
+                <span asp-validation-for="Duracion" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Clasificacion" class="control-label"></label>
+                <input asp-for="Clasificacion" class="form-control" />
+                <span asp-validation-for="Clasificacion" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="FechaEstreno" class="control-label"></label>
+                <input asp-for="FechaEstreno" class="form-control" />
+                <span asp-validation-for="FechaEstreno" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Resumen" class="control-label"></label>
+                <input asp-for="Resumen" class="form-control" />
+                <span asp-validation-for="Resumen" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Create" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

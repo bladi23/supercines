@@ -13,6 +13,7 @@ namespace supercines.Models
 
         public int CineId { get; set; }
         public cinesModel Cine { get; set; }
+        public List<funcionesModel> Funciones { get; set; } = new List<funcionesModel>();
 
     }
 }

@@ -13,5 +13,6 @@ namespace supercines.Models
         public string Nombre { get; set; }
         public string Nacionalidad { get; set; }
         public int CantidadPeliculas { get; set; }
+        public List<repartosModel> Repartos { get; set; } = new List<repartosModel>();
     }
 }
