@@ -5,9 +5,9 @@
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
-<h1>Create</h1>
+<h1>Nueva Pelicula</h1>
 
-<h4>peliculasModel</h4>
+
 <hr />
 <div class="row">
     <div class="col-md-4">
@@ -55,7 +55,7 @@
             </div>
             <div class="form-group">
                 <label asp-for="Duracion" class="control-label"></label>
-                <input asp-for="Duracion" class="form-control" />
+                <input asp-for="Duracion" type="time" class="form-control" />
                 <span asp-validation-for="Duracion" class="text-danger"></span>
             </div>
             <div class="form-group">
@@ -65,7 +65,7 @@
             </div>
             <div class="form-group">
                 <label asp-for="FechaEstreno" class="control-label"></label>
-                <input asp-for="FechaEstreno" class="form-control" />
+                <input asp-for="FechaEstreno" type="date" class="form-control" />
                 <span asp-validation-for="FechaEstreno" class="text-danger"></span>
             </div>
             <div class="form-group">
