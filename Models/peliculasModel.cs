@@ -1,4 +1,5 @@
-﻿using System.ComponentModel.DataAnnotations;
+﻿using Microsoft.CodeAnalysis.Options;
+using System.ComponentModel.DataAnnotations;
 
 namespace supercines.Models
 {
@@ -32,9 +33,20 @@ namespace supercines.Models
         [Required(ErrorMessage = "La URL del sitio web es requerida")]
         [Display(Name = "URL sitio web")]
         public string UrlSitioWeb { get; set; }
+        [Required(ErrorMessage = "La duracion es requerida")]
+        [Display(Name = "Duracion")]
         public TimeSpan Duracion { get; set; }
+        [Required(ErrorMessage = "La clasificacion es requerida")]
+        [Display(Name = "Clasificacion")]
         public string Clasificacion { get; set; }
+            [Required(ErrorMessage = "La fecha de estreno es requerida")]
+            [Display(Name = "Fecha de estreno")]
         public DateOnly FechaEstreno { get; set; }
+        [Required(ErrorMessage = "El resumen es requerido")]
+        [Display(Name = "Resumen")]
         public string Resumen { get; set; }
+
+        public List<repartosModel> Reparto { get; set; } = new List<repartosModel>();
+        public List<opinionesModel> Opiniones { get; set; } = new List<opinionesModel>();
     }
 }
